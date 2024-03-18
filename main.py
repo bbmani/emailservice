@@ -7,21 +7,20 @@ ca = certifi.where()
 
 
 def Connection():
-    uri = "mongodb+srv://mwilliams:monalisawilliams1234@geographicalsciences.n7nb2bf.mongodb.net/?retryWrites=true&w=majority"
+    uri = "mongodb://localhost:27017"
 
     client = MongoClient(uri)
     # Send a ping to confirm a successful connection
 
     database = client.BudgetForecast
-    loginCollection = database.LoginList
     emailCollection = database.EmailList
 
-    return client, loginCollection, emailCollection
+    return client, emailCollection
 
 
 app = Flask(__name__)
 app.secret_key = "eLPbL-J-5QAJlnLbgv@PYsVU"
-client, loginCollection, emailCollection = Connection()
+client, emailCollection = Connection()
 
 
 @app.route("/api/list", methods=["GET"])
@@ -67,6 +66,6 @@ def access():
 
 if __name__ == "__main__":
     app.run(port=7777)
-    # client, loginCollection, emailCollection = Connection()
+    # client, emailCollection = Connection()
     # value = {"name": "Balaji Bharatwaj Manikandan", "email": "mbalaji.manikandan"}
     # emailCollection.insert_one(value)
