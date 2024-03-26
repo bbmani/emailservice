@@ -12,6 +12,8 @@ def Connection():
     client = MongoClient(uri)
     # Send a ping to confirm a successful connection
 
+    print(client)
+
     database = client.BudgetForecast
     emailCollection = database.EmailList
 
@@ -65,7 +67,7 @@ def access():
 
 
 if __name__ == "__main__":
-    app.run(port=7777)
+    app.run(port=7777, debug=True)
     # client, emailCollection = Connection()
     # value = {"name": "Balaji Bharatwaj Manikandan", "email": "mbalaji.manikandan"}
     # emailCollection.insert_one(value)

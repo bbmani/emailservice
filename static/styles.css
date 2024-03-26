@@ -1,80 +1,212 @@
-body {
-    font-family: 'Nunito', sans-serif;
-    background-color: black;
-    color: white;
+* {
+    font-family: "Roboto Condensed", sans-serif;
 }
 
-input {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-label {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.card {
-    border: 2px solid white;
+.custom-navbar-brand {
     border-radius: 5px;
-    padding: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: black;
-}
-
-.email-card {
-    border: 2px solid white;
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-top: 10px;
+    font-weight: 700;
     padding: 20px;
+    transition: 0.8s;
+    background-color: #fcb603;
+}
+
+.nav-link-style{
+    letter-spacing: 1.5px;
+    font-weight: 900;
+    font-style: normal;
+    color: black;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+.hero {
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.hero-header{
+    font-size: calc(2vw + 2vh + 1vmin);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+hr.horizontal{
+    border-top: 7px solid  #e21833;
+    width: 30%;
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.uploader {
+    padding: 20px;
+    margin-top: 10px;
+    /* box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3); */
     border-radius: 5px;
+    border: 2px solid #e6e6e6;
 }
 
-.email-address {
-    font-size: 20px;
+.upload-header {
+    font-size: calc(0.5vw + 1.5vh + 1vmin);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 15px;
 }
 
+input[type=file] {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
-.full-name {
-    font-size: 20px;
+input[type=file]::file-selector-button {
+    margin-right: 30px;
+    border: none;
+    background: #fcb603;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: 700;
 }
 
-.delete-button {
-    text-align: right;
+input[type=text] {
+    margin-top: 20px;
+    width: 100%;
 }
 
-.title_card {
-    min-height: 200px;
-    color: white;
-    text-align: center;
-    background-color: red;
-    display: grid;
-    place-items: center;
-    margin-top: 50px;
+input[type=text]::placeholder{
+    padding-left: 10px;
+}
+
+input[type=email] {
+    margin-top: 20px;
+    width: 100%;
+}
+
+input[type=email]::placeholder{
+    padding-left: 10px;
+}
+
+.selector {
+    padding: 20px;
+    margin-top: 10px;
+    /* box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3); */
+    border-radius: 5px;
+    border: 2px solid #e6e6e6;
+}
+input[type=submit] {
+    border: none;
+    padding: 10px 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    background: #fcb603;
+    color: black;
+    width: 100%;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-top: 20px;
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .title_card_1 {
-        font-size: 30px;
+label {
+    font-weight: 800;
+}
+
+
+/* ------------------------------------------------------------------- */
+
+.message {
+    margin-top: 20px;
+    font-weight: 700;
+    text-align: center;
+    animation: fadeOut 10s ease-out forwards;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+
+@keyframes fadeOut {
+    0%, 100% {
+        opacity: 1;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .title_card_1 {
-        font-size: 40px;
-        font-weight: 500;
-    }
+
+
+/* -------------------------------------------------------------------------------- */
+.department-footer {
+    margin-top: 100px;
+    border-top: 3px solid #ffd200;
+    background-color: #e6e6e6;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .title_card_1 {
-        font-size: 50px;
-        font-weight: 700;
-    }
+
+.department-header {
+    font-size: calc(0.5vw + 1vh + 0.5vmin);
+    font-weight: 600;
+    letter-spacing: 2px;
 }
+
+.department-address {
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: calc(0.3vw + 0.3vh + 0.5vmin);
+}
+
+/* ------------------------------------------------------------------------------------- */
+.credits {
+    font-size: calc(0.3vw + 0.3vh + 0.5vmin);
+    font-weight: 600;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------- */
+.footer {
+    background-color:  #990000;
+}
+
+.bsos_logo{
+    width: 80%;
+}
+
+.bsos_image {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------- */
+#list{
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #e6e6e6;
+    overflow-y: auto;
+    height: 600px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------- */
+.get-button{
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: #fcb603;
+    color: black;
+    width: 100%;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.file-header{
+    font-weight: 800;
+    font-size: calc(2vh + 0.5vmin);
+    margin-top: 15px;
+}
+
